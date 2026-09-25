@@ -1,0 +1,237 @@
+/* ==========================================================
+   UK RETAIL ANALYTICS — CLEAN LIGHT THEME
+   Cream canvas • white cards • green accents
+   Intentionally avoids global Streamlit vertical-gap overrides.
+   ========================================================== */
+
+:root {
+    --app-bg: #F3F5F0;
+    --main-bg: #E9EEE7;
+    --surface: #FFFFFF;
+    --surface-soft: #F8FAF6;
+
+    --text-primary: #1B2B22;
+    --text-secondary: #58685E;
+    --text-muted: #6D7B72;
+
+    --green: #1F8054;
+    --green-dark: #176744;
+    --green-soft: #E2F1E8;
+
+    --border: #D7E0D8;
+    --radius-card: 16px;
+    --shadow-card: 0 4px 16px rgba(25, 50, 34, 0.045);
+}
+
+/* App canvas + main content background */
+html,
+body,
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] {
+    background: var(--main-bg) !important;
+    color: var(--text-primary);
+}
+
+/* Keep Streamlit's layout flow intact; only adjust page gutters */
+.main .block-container,
+[data-testid="stMainBlockContainer"] {
+    max-width: 1600px;
+    padding-top: 1.35rem;
+    padding-bottom: 2rem;
+    padding-left: clamp(1.25rem, 3vw, 3rem);
+    padding-right: clamp(1.25rem, 3vw, 3rem);
+}
+
+/* Preserve sidebar as a distinct region without changing its width */
+section[data-testid="stSidebar"] {
+    background: #FFFFFF;
+    border-right: 1px solid var(--border);
+}
+
+section[data-testid="stSidebar"] > div {
+    background: transparent;
+}
+
+/* Typography and secondary copy */
+h1, h2, h3, h4,
+[data-testid="stMarkdownContainer"] h1,
+[data-testid="stMarkdownContainer"] h2,
+[data-testid="stMarkdownContainer"] h3 {
+    color: var(--text-primary);
+}
+
+.page-header {
+    margin: 0 0 1.15rem 0;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: clamp(1.8rem, 2.4vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 1.12;
+}
+
+.page-header p {
+    margin: 0.55rem 0 0;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.eyebrow {
+    margin-bottom: 0.45rem;
+    color: var(--green);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.section-label {
+    margin: 0 0 0.6rem 0;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 750;
+    letter-spacing: 0;
+}
+
+.text-secondary,
+.text-muted,
+.card-subtitle,
+.kpi-subtitle,
+.filter-help,
+[data-testid="stCaptionContainer"] {
+    color: var(--text-secondary) !important;
+}
+
+/* Filter area */
+.filter-panel,
+.filters-card {
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 0.85rem 1rem;
+}
+
+label,
+[data-testid="stWidgetLabel"] p {
+    color: var(--text-secondary) !important;
+}
+
+/* KPI cards */
+.kpi-card {
+    min-width: 0;
+    height: 100%;
+    padding: 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+}
+
+.kpi-title {
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    font-weight: 650;
+}
+
+.kpi-value {
+    margin-top: 0.65rem;
+    color: var(--text-primary);
+    font-size: clamp(1.35rem, 1.8vw, 1.75rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+}
+
+.kpi-subtitle {
+    margin-top: 0.45rem;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+}
+
+/* Chart cards — no forced heights or layout positioning */
+.chart-card {
+    min-width: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    padding: 1.1rem;
+    box-shadow: var(--shadow-card);
+}
+
+.large-card {
+    min-height: 0;
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-title {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 750;
+    line-height: 1.3;
+}
+
+.card-subtitle {
+    margin-top: 0.3rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    line-height: 1.45;
+}
+
+.card-pill {
+    flex: 0 0 auto;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    background: var(--green-soft);
+    color: var(--green-dark);
+    font-size: 0.65rem;
+    font-weight: 800;
+}
+
+/* Streamlit buttons */
+.stButton > button,
+section[data-testid="stSidebar"] .stButton > button {
+    border-radius: 10px;
+    transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.stButton > button[kind="primary"] {
+    background: var(--green);
+    border-color: var(--green);
+    color: #FFFFFF;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+}
+
+/* Keep custom spacer class modest; do not override Streamlit's block gaps */
+.vertical-space {
+    height: 12px;
+}
+
+/* Small screens: keep content within viewport */
+@media (max-width: 900px) {
+    .main .block-container,
+    [data-testid="stMainBlockContainer"] {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .chart-card,
+    .kpi-card {
+        padding: 0.9rem;
+    }
+}

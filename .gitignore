@@ -1,0 +1,24 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Streamlit secrets
+.streamlit/secrets.toml
+.streamlit/notepad .streamlit
+
+# VS Code settings
+.vscode/
+
+# Local datasets / analysis files
+*.xlsx
+*.parquet
+
+# Backup archives
+*.zip
+
+# OS filesgit status
+.DS_Store
+Thumbs.db

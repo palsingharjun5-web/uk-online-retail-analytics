@@ -1,0 +1,588 @@
+/* ============================================================
+   UK RETAIL ANALYTICS
+   GLOBAL DESIGN SYSTEM
+============================================================ */
+
+
+/* ============================================================
+   ROOT
+============================================================ */
+
+:root {
+    --background: #f4f5f1;
+    --surface: #ffffff;
+    --surface-soft: #f8f9f6;
+
+    --sidebar: #15231b;
+    --sidebar-hover: #213229;
+
+    --text-primary: #18201b;
+    --text-secondary: #7d8880;
+    --text-muted: #9ba49d;
+
+    --accent: #73966c;
+    --accent-dark: #4f704c;
+    --accent-light: #e8f1e5;
+
+    --border: #e3e7e1;
+
+    --radius-small: 10px;
+    --radius-medium: 14px;
+    --radius-large: 18px;
+}
+
+
+/* ============================================================
+   APP
+============================================================ */
+
+.stApp {
+    background: url("__MINT_BG__") center center / cover fixed no-repeat;
+    color: var(--text-main);
+}
+
+/* Main content */
+
+.block-container {
+    max-width: 1500px;
+    padding-top: 1.6rem;
+    padding-bottom: 3rem;
+}
+
+
+/* ============================================================
+   HIDE DEFAULT STREAMLIT UI
+============================================================ */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+[data-testid="stToolbar"] {
+    visibility: hidden;
+}
+
+
+/* ============================================================
+   SIDEBAR
+============================================================ */
+
+section[data-testid="stSidebar"] {
+    background: var(--sidebar);
+    border-right: none;
+}
+
+section[data-testid="stSidebar"] > div {
+    padding: 2rem 1.25rem;
+}
+
+
+/* ============================================================
+   BRAND
+============================================================ */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0.5rem 0 2.8rem 0;
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        #c3dfb7,
+        #73a36b
+    );
+
+    color: #15231b;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.brand-title {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.brand-subtitle {
+    color: #8e9d92;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+
+/* ============================================================
+   SIDEBAR LABELS
+============================================================ */
+
+.sidebar-label {
+    color: #708077;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    margin: 0 0 8px 7px;
+}
+
+.insights-label {
+    margin-top: 26px;
+}
+
+
+/* ============================================================
+   SIDEBAR BUTTONS
+============================================================ */
+
+section[data-testid="stSidebar"] .stButton {
+    margin-bottom: 3px;
+}
+
+section[data-testid="stSidebar"] .stButton button {
+    width: 100%;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #aebbb1;
+
+    text-align: left;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    padding: 10px 12px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+section[data-testid="stSidebar"] .stButton button:hover {
+    background: var(--sidebar-hover);
+    color: #ffffff;
+
+    transform: translateX(2px);
+}
+
+section[data-testid="stSidebar"] .stButton button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+
+/* ============================================================
+   SIDEBAR BOTTOM
+============================================================ */
+
+.sidebar-bottom {
+    position: absolute;
+
+    bottom: 1.8rem;
+    left: 1.25rem;
+    right: 1.25rem;
+
+    padding-top: 1.2rem;
+
+    border-top: 1px solid #2a382f;
+}
+
+.sidebar-bottom-title {
+    color: #708077;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.sidebar-bottom-text {
+    color: #89978e;
+
+    font-size: 10px;
+
+    margin-top: 5px;
+}
+
+
+/* ============================================================
+   SEARCH BAR
+============================================================ */
+
+.search-box {
+    width: 310px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 15px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    color: #9aa39c;
+
+    font-size: 12px;
+
+    box-shadow:
+        0 3px 15px rgba(30, 45, 34, 0.03);
+}
+
+.search-icon {
+    color: var(--accent-dark);
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* ============================================================
+   USER AREA
+============================================================ */
+
+.user-area {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 3px;
+}
+
+.notification {
+    color: #68756d;
+
+    font-size: 20px;
+
+    margin-right: 8px;
+}
+
+.profile-avatar {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dbe8d7;
+
+    color: #42613f;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.profile-details {
+    min-width: 75px;
+}
+
+.profile-name {
+    color: var(--text-primary);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.profile-role {
+    color: var(--text-muted);
+
+    font-size: 9px;
+
+    margin-top: 3px;
+}
+
+
+/* ============================================================
+   PAGE HEADER
+============================================================ */
+
+.page-header {
+    margin-top: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+.eyebrow {
+    color: var(--accent);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 32px;
+    font-weight: 750;
+
+    letter-spacing: -1.1px;
+
+    line-height: 1.15;
+}
+
+.page-header p {
+    margin-top: 8px;
+    margin-bottom: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   SECTION LABEL
+============================================================ */
+
+.section-label {
+    color: #87928a;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ============================================================
+   KPI CARDS
+============================================================ */
+
+.kpi-card {
+    min-height: 118px;
+
+    padding: 18px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-large);
+
+    box-shadow:
+        0 4px 18px rgba(25, 40, 28, 0.035);
+}
+
+.kpi-title {
+    color: var(--text-secondary);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.kpi-value {
+    color: var(--text-primary);
+
+    font-size: 24px;
+    font-weight: 750;
+
+    letter-spacing: -0.7px;
+
+    margin-top: 12px;
+}
+
+.kpi-subtitle {
+    color: var(--text-muted);
+
+    font-size: 9px;
+
+    margin-top: 5px;
+}
+
+
+/* ============================================================
+   SPACING
+============================================================ */
+
+.vertical-space {
+    height: 22px;
+}
+
+
+/* ============================================================
+   CHART CARDS
+============================================================ */
+
+.chart-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-large);
+
+    padding: 21px;
+
+    box-shadow:
+        0 4px 18px rgba(25, 40, 28, 0.035);
+}
+
+.large-card {
+    min-height: 355px;
+}
+
+
+/* ============================================================
+   CARD HEADER
+============================================================ */
+
+.card-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.card-title {
+    color: #202a23;
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.card-subtitle {
+    color: #929b95;
+
+    font-size: 9px;
+
+    margin-top: 5px;
+}
+
+.card-pill {
+    background: var(--accent-light);
+
+    color: var(--accent-dark);
+
+    border-radius: 20px;
+
+    padding: 6px 10px;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   CHART PLACEHOLDER
+============================================================ */
+
+.chart-placeholder {
+    height: 270px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f9f5,
+            #edf3ea
+        );
+
+    color: #a1aaa4;
+
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   EMPTY PAGE
+============================================================ */
+
+.empty-page {
+    min-height: 420px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-large);
+
+    box-shadow:
+        0 4px 18px rgba(25, 40, 28, 0.035);
+}
+
+.empty-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: var(--accent-light);
+
+    color: var(--accent-dark);
+
+    font-size: 19px;
+    font-weight: 800;
+
+    margin-bottom: 17px;
+}
+
+.empty-page h2 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 21px;
+}
+
+.empty-page p {
+    color: var(--text-secondary);
+
+    font-size: 11px;
+
+    margin-top: 7px;
+}

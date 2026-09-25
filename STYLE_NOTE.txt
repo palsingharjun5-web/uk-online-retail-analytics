@@ -1,0 +1,8 @@
+UK Retail Dashboard — Cleaned Project Package
+
+This archive is based on the uploaded Project 2.zip.
+Removed .venv, Python cache files, and .streamlit/secrets.toml.
+The standalone Style/style_clean_light.css is included as a draft.
+NOTE: The app currently applies styling inline from Components/theme.py;
+the standalone CSS is NOT activated automatically. No Python files were changed.
+Restore your own .streamlit/secrets.toml locally (never share it).

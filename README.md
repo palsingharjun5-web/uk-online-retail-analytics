@@ -109,24 +109,6 @@ The project includes checks for duplicate transactions, missing customer IDs, mi
 
 Relevant data-quality limitations and analytical caveats are also documented within the dashboard.
 
-## Project Structure
-
-'''text
-
-UK Retail Dashboard/
-│
-├── Assets/
-├── Components/
-├── Pages_Views/
-├── SQL/
-├── Style/
-├── app.py
-├── db_connection.py
-├── requirements.txt
-└── STYLE_NOTE.txt
-
-```
-
 Running the Project Locally
 
 Clone the repository and navigate into the project directory:

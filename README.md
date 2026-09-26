@@ -111,7 +111,7 @@ Relevant data-quality limitations and analytical caveats are also documented wit
 
 ## Project Structure
 
-```text
+
 UK Retail Dashboard/
 │
 ├── Assets/

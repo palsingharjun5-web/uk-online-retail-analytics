@@ -12,7 +12,8 @@ def get_connection():
         port=st.secrets["postgres"]["port"],
         dbname=st.secrets["postgres"]["dbname"],
         user=st.secrets["postgres"]["user"],
-        password=st.secrets["postgres"]["password"]
+        password=st.secrets["postgres"]["password"],
+        sslmode=st.secrets["postgres"]["sslmode"]
     )
 
     return conn

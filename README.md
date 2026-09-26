@@ -2,6 +2,10 @@
 
 An end-to-end data analytics project built using Python, Pandas, PostgreSQL, SQL, Streamlit, and Plotly to analyze UK online retail transaction data and transform it into an interactive business intelligence dashboard.
 
+## Live Dashboard
+
+**[Open the Live Dashboard](https://uk-online-retail-analytics-gdji7rphbtzyfdwxkw49nd.streamlit.app/)**
+
 ## Project Overview
 
 This project analyzes over 1 million retail transaction records from a UK online retailer covering the period from December 2009 to December 2011.
@@ -133,11 +137,13 @@ Database credentials and other sensitive configuration files are intentionally e
 
 The project's .gitignore prevents local secrets, datasets, virtual environments, and backup files from being committed.
 
-Project Status
+## Project Status
 
-The analytical workflow and interactive dashboard are complete.
+The analytical workflow, PostgreSQL database, interactive dashboard, and cloud deployment are complete.
 
-The project is currently being prepared for deployment and portfolio presentation.
+The dashboard is publicly deployed using Streamlit Community Cloud and connected to the hosted PostgreSQL database on Neon.
+
+The project is now ready for portfolio presentation.
 
 Author
 

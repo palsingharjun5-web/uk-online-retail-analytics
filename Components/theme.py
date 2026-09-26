@@ -4,7 +4,7 @@ from pathlib import Path
 
 def apply_theme():
         # Load background image and convert it to Base64
-    image_path = Path(__file__).resolve().parent.parent / "assets" / "bg.png"
+    image_path = Path(__file__).resolve().parent.parent / "Assets" / "bg.png"
 
     with open(image_path, "rb") as image_file:
         bg_base64 = base64.b64encode(image_file.read()).decode()

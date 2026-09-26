@@ -111,6 +111,7 @@ Relevant data-quality limitations and analytical caveats are also documented wit
 
 ## Project Structure
 
+'''text
 
 UK Retail Dashboard/
 │
@@ -123,6 +124,8 @@ UK Retail Dashboard/
 ├── db_connection.py
 ├── requirements.txt
 └── STYLE_NOTE.txt
+
+```
 
 Running the Project Locally
 
